@@ -7,7 +7,9 @@
 <meta name="viewport" content="width = device-width,initial-scale=1">
 <title> Social Revolution </title>
 <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+<link href="https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Jim+Nightshade|Lobster" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet">
 <style>
 	#con{
 		color: black;
@@ -19,7 +21,7 @@
 		background-image: url("css/images/bg.jpg");
 		background-size: auto auto;
 		background-repeat: no-repeat;
-		font-family: Lobster;
+		font-family: Acme;
 	}
 	#phi{
 		
@@ -33,6 +35,16 @@
 	.jumbotron2{
 		background-color: #c8f442;
 		height: 35px;
+	}
+
+	.jumbotron3{
+		background-color: red;
+		height: 2px;
+	}
+
+	.jumbotron4{
+		background-color: purple;
+		height: 10px;
 	}
 	.header img{
 		float: left;
@@ -77,9 +89,29 @@
 		position: fixed;
 	}
 	.carousel-inner{
-		
-		max-width: 200em;
+			
 	}
+	#theCarousel{
+		min-height: 100vh;
+	}
+	img{
+		height: 100% , width:auto;
+		padding: 0px 0px 0px 0px;
+	}
+	.imcircle{
+		border:5px solid black;
+		border-radius: 100%;
+		height: 200px;
+		width: 200px;
+	}
+	
+	#id1
+	{
+		background-image: url("css/images/bgdev.png");
+		background-repeat: no-repeat;
+		height: 40em;
+	}
+	
 </style>
 
 
@@ -91,13 +123,15 @@
 	
 
 
-</span>
-<div class="container">
+
+<div class="jumbotron4"></div><p></p>
+<div class="jumbotron3"></div>
+<div class="container" id="Home">
 	<div class="header"  class="jumbotron" id="phi">
 		<img src="css/images/logo.png" style="margin-top: 2em;">
 		<ul class="list-inline" class="spacing">
-			<li><h1>Social Responsibility . com</h1></li>
-		<li style="margin-left: 60em;"><a href="signin.php"><button class="btn btn-submit"><div id="flip"><span class="glyphicon glyphicon-user"><span class="f">Sign In  <span style="font-family: arial;">   OR   </span> <span class="glyphicon glyphicon-plus"><span class="f">  Sign Up</span></span></span></span></button></a></li>
+			<li><h1>Socialrevolution.com</h1></li>
+		<li style="float: right;margin-top: 5em;"><a href="signin.php"><button class="btn btn-submit"><div id="flip"><span class="glyphicon glyphicon-user"><span class="f">Sign In  <span style="font-family: arial;">   OR   </span> <span class="glyphicon glyphicon-plus"><span class="f">  Sign Up</span></span></span></span></button></a></li>
 
 		
 		</ul>
@@ -108,25 +142,18 @@
 	<p>          </p>
 	<p>          </p>
 	<p>          </p>
-<div class="container" class="spacing">
+<div class="container" class="spacing" style="width:auto; margin-left: -1em;">
 	<div class="jumbotron2">
 	<ul class="list-inline" class="spacing">
-	<li style="margin-left: 0em;"><a href="#"><button class="btn btn-default"><div id="flip"><span class="glyphicon glyphicon-home"><span class="f"> Home<span></span></div> <div id="panel">Hello world!</div></button></a></li>
+	<li style="margin-left: 5em;"><a href="#"><button class="btn btn-default"><div id="flip"><span class="glyphicon glyphicon-home"><span class="f"> Home<span></span></div> <div id="panel">Hello world!</div></button></a></li>
 	<li style="margin-left: 0em;"><a href="#l"><button class="btn btn-default"><span class="glyphicon glyphicon-info-sign"><span class="f"> About</span></span></button></a></li>
 	
 
-	<li class="dropdown" style="margin-left: 0em;"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><button class="btn btn-default">Contact us</button><span class="caret"></span>
-	<ul class="dropdown-menu">
-	<li><a href="#conus">Phone</a></li>
-	<li><a href="#conus">Email</a></li>
-	<li><a href="#conus">Mobile</a></li>
-	</ul>
-	<li style="margin-left: 0em;"><a href="#"><button class="btn btn-default"><div id="flip">Events</div> <div id="panel">Hello world!</div></button></a></li>
-	
-
-
-	</a>
+	<li style="margin-left: 0em;"><a href="#conus"><button class="btn btn-default">Contact us</button>
 	</a></li>
+	<li style="margin-left: 0em;"><a href="feed.php"><button class="btn btn-default"><div id="flip">Events</div> <div id="panel">Hello world!</div></button></a></li>
+	
+	</a>
 	</ul>
 	</div>
 </div>
@@ -139,41 +166,27 @@
 <ol class="carousel-indicators">
 	<li data-target="#theCarousel" data-slide-to="0"></li>
 	<li data-target="#theCarousel" data-slide-to="1"></li>
-	<li data-target="#theCarousel" data-slide-to="2"></li>
-	<li data-target="#theCarousel" data-slide-to="3"></li>
+		
 </ol>
 <div class="carousel-inner">
 	<div class="item active">
 	<div class="slide1"></div>
-	<img src="css/images/sl1.jpg">
+	<img src="css/images/vol1.png" style="margin-left: 5em">
 	<div class="carousel-caption">
-		<h1>dummy1</h1>
+		
 	</div>
 	</div>
 
 	<div class="item">
 	<div class="slide2"></div>
-	<img src="css/images/sl2.jpg">
+	<img src="css/images/vol2.jpg">
 	<div class="carousel-caption">
-		<h1>dummy2</h1>
+		
 	</div>
 	</div>
 
-	<div class="item">
-	<div class="slide3"></div>
-	<img src="css/images/sl3.jpg">
-	<div class="carousel-caption">
-		<h1>dummy3</h1>
-	</div>
-	</div>
 
-	<div class="item">
-	<div class="slide4"></div>
-	<img src="css/images/sl2.jpg">
-	<div class="carousel-caption">
-		<h1>dummy4</h1>
-	</div>
-	</div>
+	
 </div>
 
 <a class="left carousel-control" href="#theCarousel" data-slide="prev">
@@ -189,8 +202,8 @@
 
 <!--===================================-->>
 
-	<div class="container" >
-	<div style="margin-top: 40em ; text-align: center;"  id="abt">
+	<div class="container"   id="abt">
+	<div style="margin-top: 20em ; text-align: center;">
 		<h1 style="font-size: 60px;">About Us</h1>
 		<p id="l" style="font-size: 20px;">This is is a Social media website which brings all the people together who are interested in social works like environmental protection,pollution,etc.As we all know, there are some people out there who are willing to help us in these activities but these people doesnt get ample support.Well ! This website is a solution for this. Our Website 'Social revolution' is a place where people who are willing to involve in the Social activities are able to seek help from other people or maybe any organisation through posts.The posts of the user comes like a news feed and those people or volunteers who can help these users can contact them or just comment beneath the post if they can be helpful to them.</p>
 	</div>
@@ -199,17 +212,41 @@
 	</div>
 	</div>
 
+	<div class="container" id="id1" style="margin-top: 10em;">
+		<div style="margin-top:10em; ">
+
+		<h1 style="margin-left: 7em
+		;font-size: 60px ; margin-bottom: 60px;">Meet the Devs</h1>
+		<p></p><p></p><p></p><p></p>
+		<ul class="list-inline">
+			<li style="margin-left: 6em;"><img src="css/images/pg.jpg" class="imcircle" ></li>
+			<li style="margin-left: 3em;"><img src="css/images/p.jpg" class="imcircle"></li>
+			<li style="margin-left: 3em;"><img src="css/images/aka.jpg" class="imcircle"></li>
+			<li style="margin-left: 3em;"><img src="css/images/avb.jpg" class="imcircle"></li>
+		</ul>
+		<ul class="list-inline" style="font-size: 20px;">
+			<li style="margin-left: 6em;">Pradeep Gangwar</li>
+			<li style="margin-left: 5em;">Shubham Verma</li>
+			<li style="margin-left: 6em;">Aswanth K Anil</li>
+			<li style="margin-left: 7em;">Aswin VB</li>
+		</ul>
+		</div>		
+	</div>
+
 	<div class="container">
-	<div style="margin-top: 10em; text-align: center;" id="conus">
+	<div style="margin-top: 5em; text-align: center;" id="conus">
 		<h1 style="font-size: 60px;">Contact Us</h1>
 		<p>+91-9811356708</p>
-		<p>socialresponsibility@gmail.com</p>
-		<p>github.com/</p>
+		<p>socialresolution@gmail.com</p>
 	</div>
 		
 	</div>
 
-	<button class="btn btn-submit"></button>
+	<a href="#Home"><button class="btn btn-submit" style="margin-left: 43em;">Back to top</button></a>
+
+	<p></p>
+
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 </body>
