@@ -150,19 +150,23 @@
     $sql = "SELECT * FROM $tbname";
     $result = $conn->query($sql);
 
+    echo '<div class="row">';
+
     if ($result->num_rows > 0) {
         // output data of each row
         while($row = $result->fetch_assoc()) {
-        echo '<div class="row">';
+        
         echo '<div class="col-lg-8 col-lg-offset-2">';
       	echo '<p><img src="css/images/user.png" width="50px" height="50px"> <ba>' .$row["topic"]. '</ba></p>';
       	echo '<p>' . $row["location"]. '</p>';
       	echo '<p><bd>' . $row["date"].  '</bd></p>';
       	echo '<p>' .$row["description"]. '</p>';
-      	echo  '<p><a href="#">Continue Reading...</a></p>';
+		echo '</div>';
 
         }
     } 
+
+    echo '</div>'
 
     ?>
 	    </div>
