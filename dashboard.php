@@ -160,7 +160,7 @@
 <a href="form.php" style="margin-left: 20em;
 "><button class="btn btn-default btn-lg" style="width: 20em;"><span class="glyphicon glyphicon-info-sign"><span class="f"> Create Issue</span></span></button></a>
 
-<a href="#cne" style="margin-left: 0em;
+<a href="feed.php" style="margin-left: 0em;
 "><button class="btn btn-default btn-lg" style="width: 20em;"><span class="glyphicon glyphicon-info-sign"><span class="f"> Discover Issue</span></span></button></a>
 
 

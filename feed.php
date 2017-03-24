@@ -129,17 +129,41 @@
 	</ul>
 	<li style="margin-left: 0em;"><a href="#"><button class="btn btn-default"><div id="flip">Events</div> <div id="panel">Hello world!</div></button></a></li>
 	 <div class="container">
-			<div class="row">
-				<div class="col-lg-8 col-lg-offset-2">
-					<p><img src="css/images/user.png" width="50px" height="50px"> <ba>Stanley Stinson</ba></p>
-					<p><bd>January 18, 2014</bd></p>
-					<h4>The Amazing Spiderman</h4>
-					<p><b>Spider-Man</b> is a fictional character, a comic book superhero that appears in comic books published by Marvel Comics. Created by writer-editor Stan Lee and writer-artist Steve Ditko, he first appeared in Amazing Fantasy #15 (cover-dated Aug. 1962). </p>
-					<p>Lee and Ditko conceived the character as an orphan being raised by his Aunt May and Uncle Ben, and as a teenager, having to deal with the normal struggles of adolescence in addition to those of a costumed crimefighter.</p>
-					<p><a href="#">Continue Reading...</a></p>
-				</div>
 
-			</div>
+	 <?php
+
+    session_start();
+
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "db1";
+    $tbname = "issues";
+
+    // Create connection
+    $conn = new mysqli($servername, $username, $password, $dbname);
+    // Check connection
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+
+    $sql = "SELECT * FROM $tbname";
+    $result = $conn->query($sql);
+
+    if ($result->num_rows > 0) {
+        // output data of each row
+        while($row = $result->fetch_assoc()) {
+        echo '<div class="row">';
+        echo '<div class="col-lg-8 col-lg-offset-2">';
+      	echo '<p><img src="css/images/user.png" width="50px" height="50px"> <ba>' .$row["topic"]. '</ba></p>';
+      	echo '<p><bd>' . $row["date"].  '</bd></p>';
+      	echo '<p>' .$row["description"]. '</p>';
+      	echo  '<p><a href="#">Continue Reading...</a></p>';
+
+        }
+    } 
+
+    ?>
 	    </div>
 	</div>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
@@ -147,3 +171,5 @@
 </body>
 
 </html>
+
+
