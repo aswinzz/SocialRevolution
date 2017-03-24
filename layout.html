@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Form</title>
+  <script type="text/javascript">/*
+    $(document).ready(function(){
+  $('input[type=button]').click(function(){
+    ajaxForm($(this));
+  });
+});
+function ajaxForm(button){
+  var form = button.closest('form'),
+      formElements = ['input:not([type=button]):not([type=submit])', 'select', 'textarea'],
+      formNames = new Array(),
+      dataString = '';
+  for (var i in formElements) {
+    form.find(formElements[i]).each(function(){
+      formNames.push([$(this).attr('name'), $(this).val()]);
+    });
+  }
+  for (var i in formNames) {
+    if (dataString!=='') {
+      dataString += '&'
+        }
+    dataString += formNames[i][0]+'='+escape(formNames[i][1]);
+  }
+  $.ajax({
+    type: form.attr('method'),
+    url: form.attr('action'),
+    data: dataString,
+    success: function(){
+      console.log(dataString); // Success actions go here.
+    }
+  });
+}*/
+  </script>
+
+</head>
+
+<body>
+<style type="text/css">
+textarea, input:not([type=button]):not([type=submit]) {
+  width: 100%;
+  border: 1px solid rgba(0,0,0,.2);
+  padding: .5em 1em;
+  font-family: sans-serif;
+}
+input[type=button], input[type=submit] {
+  cursor: pointer;
+  margin: 0;
+  padding: .5em 2em;
+  background: #0298b6;
+  border: none;
+  color: #fff;
+}
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+form {
+  width: 30em;
+  margin: 0 auto;
+}
+form div.group > div {
+  width: 46%;
+  margin: 0 0 .5em;
+}</style>
+  <form method="POST" action="newissue.php">
+  <div class="group">
+    <div class="left">
+      <input type="text" value="" placeholder="NAME" name="author" tabindex="1" class="redacted" required/>
+    </div>
+    <div class="right">
+      <input type="text" value="" placeholder="SUBJECT" name="title" tabindex="2" class="redacted" required/>
+    </div>
+  </div>
+  <div class="group">
+    <div class="left">
+      <input type="text" value="" placeholder="Location" name="location" tabindex="3" class="redacted" />
+    </div>
+    <div class="right">
+      <input type="text" value="" placeholder="PHONE" name="phone" tabindex="4" class="redacted" />
+    </div>
+  </div>
+  <div>
+    <textarea placeholder="MESSAGE" name="description" tabindex="5" rows="10" class="redacted" required></textarea>
+  </div>
+  <div>
+    <input type="submit" class="button" value="Submit" name="submit">  </div>
+</form>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+    <script src="js/index.js"></script>
+
+</body>
+</html>
