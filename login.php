@@ -29,6 +29,13 @@
 
     if($pass == $act_pass){
       echo "Correct!";
+      $_SESSION['login_user'] = $user;
+      $_SESSION['type'] = active;
       header("location: welcome.php");
     }
+    else{
+      echo '<script language="javascript">';
+      echo 'alert("Wrong Username or Password. Click Ok to redirect back to login page")';
+      echo '</script>';   
+      header("Refresh: 1; url=index.html");    }
   ?>

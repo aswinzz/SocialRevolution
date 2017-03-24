@@ -2,7 +2,6 @@
 
   if(isset($_POST['submit'] )){
 
-    $id = '12';
     $title = ($_POST['title']);
     $author = ($_POST['author']);
     $location = ($_POST['location']);
@@ -24,7 +23,7 @@
         die("Connection failed: " . $conn->connect_error);
     }
 
-    $sql = "INSERT INTO issues (id, topic, author, location, description, phone) VALUES ('$id', '$title', '$author',   '$location', '$description', '$phone')";
+    $sql = "INSERT INTO issues ( topic, author, location, description, phone) VALUES ('$title', '$author',   '$location', '$description', '$phone')";
 
     
     if ($conn->query($sql) === TRUE) {
