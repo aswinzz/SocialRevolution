@@ -40,3 +40,14 @@ ___
 * Make The PR.
 * We Will Cross Check The PR And Merge It.
 * Happy Contributing.
+
+## About The Website
+- The Website is based on bootstrap framework with php as back-end
+- we have hosted our website in 000webhost
+- we took the domain from radix
+
+## Developers
+- [Pradeep Gangwar](https://github.com/Pradeepgangwar) 
+- [Shubham Verma](https://github.com/shubhamverma1997)
+- [Aswanth K](https://github.com/aswanthkoleri)
+- [Aswin VB](https://github.com/aswinzz)
