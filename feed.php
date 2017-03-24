@@ -182,7 +182,7 @@
         echo '<p>' . $row["location"]. '</p>';
       	echo '<p><bd>' . $row["date"].  '</bd></p>';
       	echo '<p>' .$row["description"]. '</p>';
-      	echo  '</div>';
+      	echo  '<hr></div>';
         
 
 
