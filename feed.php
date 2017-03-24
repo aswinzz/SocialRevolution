@@ -83,9 +83,20 @@
 </style>
 
     <link href="css/bootstrap.css" rel="stylesheet">
+
+
+
+    <link href="css/main.css" rel="stylesheet">
+
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+
+
 </head>
+
 <body class="f">
+	
+
+
 </span>
 <div class="container">
 	<div class="header"  class="jumbotron" id="phi">
@@ -118,16 +129,17 @@
 	</ul>
 	<li style="margin-left: 0em;"><a href="#"><button class="btn btn-default"><div id="flip">Events</div> <div id="panel">Hello world!</div></button></a></li>
 	 <div class="container">
+<br>
 
 	 <?php
 
     session_start();
-
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "db1";
+$servername = "localhost";
+    $username = "id1169632_aswin";
+    $password = "8089374348";
+    $dbname = "id1169632_db1";
     $tbname = "issues";
+
 
     // Create connection
     $conn = new mysqli($servername, $username, $password, $dbname);
@@ -138,20 +150,23 @@
 
     $sql = "SELECT * FROM $tbname";
     $result = $conn->query($sql);
+    echo '<div class="row">';
 
     if ($result->num_rows > 0) {
         // output data of each row
         while($row = $result->fetch_assoc()) {
-        echo '<div class="row">';
-        echo '<div class="col-lg-8 col-lg-offset-2">';
+                echo '<div class="col-lg-8 col-lg-offset-2">';
       	echo '<p><img src="css/images/user.png" width="50px" height="50px"> <ba>' .$row["topic"]. '</ba></p>';
-      	echo '<p>' . $row["location"]. '</p>';
+        echo '<p>' . $row["location"]. '</p>';
       	echo '<p><bd>' . $row["date"].  '</bd></p>';
       	echo '<p>' .$row["description"]. '</p>';
-      	echo  '<p><a href="#">Continue Reading...</a></p>';
+      	echo  '</div>';
+        
+
 
         }
     } 
+echo '</div>';
 
     ?>
 	    </div>
@@ -161,5 +176,3 @@
 </body>
 
 </html>
-
-
