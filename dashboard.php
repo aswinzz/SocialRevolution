@@ -1,10 +1,22 @@
+<?php
+	session_start();
+
+	if(!isset($_SESSION['login_user'])){  
+	  echo '<script language="javascript">';
+      echo 'alert("What? Dude login first :P")';
+      echo '</script>';   
+      header("Refresh: 1; url=index.html"); 
+      exit();
+	}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width = device-width,initial-scale=1">
-<title> Shubham Verma </title>
+<title> Welcome User </title>
 <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 <link href="https://fonts.googleapis.com/css?family=Jim+Nightshade|Lobster" rel="stylesheet">
 </head>
@@ -18,7 +30,7 @@
 		width: auto;
 	}
 	.f{
-		background-image: url("css/images/bg.jpg");
+		background-image: url("bg.jpg");
 		background-size: auto auto;
 		background-repeat: no-repeat;
 		font-family: Lobster;
@@ -102,19 +114,19 @@
 	<div class="header"  class="jumbotron" id="phi">
 		
 
-		<img src="css/images/logo.png" style="margin-top: 2em;">
+		<img src="help.png" style="margin-top: 2em;">
 		<ul class="list-inline" class="spacing" >
 		<li><h1 class="spacing">Social Responsibiity .com</h1></li>
 		<li><div class="media" style="margin-left:55em;margin-top: -80px;">
 		<div class="media-left media-top">
 			<a href="#">
-			<img class="media-object" src="css/images/dp.jpg" alt="">
+			<img class="media-object" src="dp.jpg" alt="">
 			</a>
 		</div>
 		<div class="media-body" style="margin-top: 10px;">
-		<h4 class="media-heading" style="margin-top: 10px;">Shubham Verma <a href="#">  <button class="btn btn-default">Log Out</button></h4></a>
-		<h5>+91-8800122789</h5>
-		<h5>lifemeansmore008@gmail.com</h5>
+		<h4 class="media-heading" style="margin-top: 10px;"><?php echo $_SESSION['login_user']; ?><a href="logout.php">  <button class="btn btn-default">Log Out</button></h4></a>
+		<h5><?php echo $_SESSION['user_phone']; ?></h5>
+		<h5><?php echo $_SESSION['user_email']; ?></h5>
 
 		</div>
 			

@@ -30,13 +30,13 @@
       echo '<script language="javascript">';
       echo 'alert("created Successfully. Click ok")';
       echo '</script>';   
-      header("Refresh: 1; url=welcome.php"); 
+      header("Refresh: 1; url=dashboard.php"); 
     }
     else{
       echo '<script language="javascript">';
       echo 'alert("OOps Error! Try again")';
       echo '</script>';   
-      header("Refresh: 1; url=welcome.php");
+      header("Refresh: 1; url=dashboard.php");
     }
     $conn->close();
 

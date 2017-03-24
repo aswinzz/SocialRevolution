@@ -25,13 +25,25 @@
     $stmt = $conn->query($sql); 
     $row =$stmt->fetch_assoc();   
     $act_pass = $row['password']; 
-    $conn->close();
 
     if($pass == $act_pass){
       echo "Correct!";
       $_SESSION['login_user'] = $user;
+      
+      $email= "SELECT email FROM $tbname WHERE username = '$user'";
+      $stmt = $conn->query($email); 
+      $row =$stmt->fetch_assoc();   
+      $email = $row['email'];
+      $_SESSION['user_email'] = $email;
+      
+      $phone = "SELECT phone FROM $tbname WHERE username = '$user'";
+      $stmt = $conn->query($phone); 
+      $row =$stmt->fetch_assoc();   
+      $phone = $row['phone'];
+      $_SESSION['user_phone'] = $phone;
       $_SESSION['type'] = active;
-      header("location: welcome.php");
+          $conn->close();
+      header("location: dashboard.php");
     }
     else{
       echo '<script language="javascript">';
