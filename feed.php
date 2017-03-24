@@ -103,8 +103,31 @@
 		<img src="css/images/logo.png" style="margin-top: 2em;">
 		<ul class="list-inline" class="spacing">
 			<li><h1>Social Responsibility . com</h1></li>
-		<li style="margin-left: 60em;"><a href="signin.php"><button class="btn btn-submit"><div id="flip"><span class="glyphicon glyphicon-user"><span class="f">Sign In  <span style="font-family: arial;">   OR   </span> <span class="glyphicon glyphicon-plus"><span class="f">  Sign Up</span></span></span></span></button></a></li>
+<?php
+	session_start();
 
+	if(!isset($_SESSION['login_user'])){  
+	  echo '<li style="margin-left: 60em;"><a href="signin.php"><button class="btn btn-submit"><div id="flip"><span class="glyphicon glyphicon-user"><span class="f">Sign In  <span style="font-family: arial;">   OR   </span> <span class="glyphicon glyphicon-plus"><span class="f">  Sign Up</span></span></span></span></button></a></li>';
+
+	}
+	else 
+	{
+		echo '<li><div class="media" style="margin-left:55em;margin-top: -80px;">';
+		echo '<div class="media-left media-top">';
+		echo  '<a href="#">';
+		echo '<img class="media-object" src="css/images/dp.jpg" alt=""></a></div>';
+		echo '<div class="media-body" style="margin-top: 10px;">';
+		echo '<h4 class="media-heading" style="margin-top: 10px;">'; echo $_SESSION['login_user'];  					echo '<a href="logout.php">  <button class="btn btn-default">Log Out</button></h4></a>';
+		echo '<h5>'; echo $_SESSION['user_phone']; '</h5>';
+		echo '<h5>'; echo $_SESSION['user_email']; '</h5>';
+
+		echo '</div>';	
+		echo '</div>';
+		echo '</div></li>';
+		
+	}
+
+?>
 		
 		</ul>
 
@@ -133,11 +156,10 @@
 
 	 <?php
 
-    session_start();
-$servername = "localhost";
-    $username = "id1169632_aswin";
-    $password = "8089374348";
-    $dbname = "id1169632_db1";
+	$servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "db1";
     $tbname = "issues";
 
 
