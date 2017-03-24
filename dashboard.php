@@ -30,7 +30,7 @@
 		width: auto;
 	}
 	.f{
-		background-image: url("bg.jpg");
+		background-image: url("css/images/bg.jpg");
 		background-size: auto auto;
 		background-repeat: no-repeat;
 		font-family: Lobster;
@@ -114,13 +114,13 @@
 	<div class="header"  class="jumbotron" id="phi">
 		
 
-		<img src="help.png" style="margin-top: 2em;">
+		<img src="css/images/help.png" style="margin-top: 2em;">
 		<ul class="list-inline" class="spacing" >
 		<li><h1 class="spacing">Social Responsibiity .com</h1></li>
 		<li><div class="media" style="margin-left:55em;margin-top: -80px;">
 		<div class="media-left media-top">
 			<a href="#">
-			<img class="media-object" src="dp.jpg" alt="">
+			<img class="media-object" src="css/images/dp.jpg" alt="">
 			</a>
 		</div>
 		<div class="media-body" style="margin-top: 10px;">
@@ -157,7 +157,7 @@
 <hr />
 
 
-<a href="form.php" style="margin-left: 20em;
+<a href="#cne" style="margin-left: 20em;
 "><button class="btn btn-default btn-lg" style="width: 20em;"><span class="glyphicon glyphicon-info-sign"><span class="f"> Create Issue</span></span></button></a>
 
 <a href="#cne" style="margin-left: 0em;
@@ -170,4 +170,4 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 </body>
-</html
+</html>
