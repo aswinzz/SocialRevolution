@@ -22,8 +22,10 @@
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     }
+    date_default_timezone_set('Asia/Calcutta');
+    $date = date('Y/m/d H:i:s');
 
-    $sql = "INSERT INTO issues ( topic, author, location, description, phone) VALUES ('$title', '$author',   '$location', '$description', '$phone')";
+    $sql = "INSERT INTO issues ( topic, author, location, description, phone, date) VALUES ('$title', '$author', '$location', '$description', '$phone', '$date')";
 
     
     if ($conn->query($sql) === TRUE) {
