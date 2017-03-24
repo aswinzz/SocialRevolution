@@ -2,7 +2,8 @@
 
 ![](http://www.gmnsight.org/wp-content/uploads/2015/04/collaboration-hands-720x320.png)
 
-##Community Problems
+
+# Community Problems
 
 Communities, be it at local level or a big level have always been integral pat of our society. And every community has it's own problems. Problems be it ours or our community, we should always come forward to solve it. 
 
@@ -17,9 +18,9 @@ Our Website 'Social revolution' is a place where people who are willing to invol
 
 ___
 
-##Steps involved on our website that will help Community:
+## Steps involved on our website that will help Community:
 
-*As a problem raiser:
+* As a problem raiser:
 	-Login to website.
 	-Register your issue.
 	-Wait and watch.
@@ -29,3 +30,13 @@ ___
 	- If you want to contribute or support some idea just click support button to register ur support.
 	- You are done.
 	- If a post gets more than some specific supporters then that issue will be transferred to local government.
+
+
+## Those Who Wish To Contribute in the development of the website:
+
+* Fork The Repo.
+* Add issues which you think should be needed.
+* Solve The Issues Which You Can .
+* Make The PR.
+* We Will Cross Check The PR And Merge It.
+* Happy Contributing.
