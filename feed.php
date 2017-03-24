@@ -156,6 +156,7 @@
         echo '<div class="row">';
         echo '<div class="col-lg-8 col-lg-offset-2">';
       	echo '<p><img src="css/images/user.png" width="50px" height="50px"> <ba>' .$row["topic"]. '</ba></p>';
+      	echo '<p>' . $row["location"]. '</p>';
       	echo '<p><bd>' . $row["date"].  '</bd></p>';
       	echo '<p>' .$row["description"]. '</p>';
       	echo  '<p><a href="#">Continue Reading...</a></p>';
