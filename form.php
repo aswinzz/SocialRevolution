@@ -1,3 +1,16 @@
+<?php
+	session_start();
+
+	if(!isset($_SESSION['login_user'])){  
+	  echo '<script language="javascript">';
+      echo 'alert("What? Dude login first :P")';
+      echo '</script>';   
+      header("Refresh: 1; url=index.php"); 
+      exit();
+	}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -115,9 +128,9 @@
 			</a>
 		</div>
 		<div class="media-body" style="margin-top: 10px;">
-		<h4 class="media-heading" style="margin-top: 10px;">Shubham Verma <a href="#">  <button class="btn btn-default">Log Out</button></h4></a>
-		<h5>+91-8800122789</h5>
-		<h5>lifemeansmore008@gmail.com</h5>
+		<h4 class="media-heading" style="margin-top: 10px;"><?php echo $_SESSION['login_user']; ?> <a href="logout.php">  <button class="btn btn-default">Log Out</button></h4></a>
+		<h5><?php echo $_SESSION['user_phone']; ?></h5>
+		<h5><?php echo $_SESSION['user_email']; ?></h5>
 
 		</div>
 			
@@ -134,7 +147,7 @@
 	<div class="jumbotron2">
 	<ul class="list-inline" class="spacing">
 	<li style="margin-left: 0em;"><a href="index.html"><button class="btn btn-default"><div id="flip"><span class="glyphicon glyphicon-home"><span class="f"> Home<span></span></div> <div id="panel">Hello world!</div></button></a></li>
-	<li style="margin-left: 0em;"><a href="dashboard.html"><button class="btn btn-default"><div id="flip">Dashboard</div> <div id="panel">Hello world!</div></button></a></li>
+	<li style="margin-left: 0em;"><a href="dashboard.php"><button class="btn btn-default"><div id="flip">Dashboard</div> <div id="panel">Hello world!</div></button></a></li>
 	
 
 	</ul>
@@ -163,31 +176,34 @@
 <hr />
 <hr />
 
+  <form method="POST" action="newissue.php">
 <div class="container" id="cne">
 <div class="input-group input-group-sm">
 <span class="input-group-addon">Your Name</span>
-<input type="text" class="form-control" placeholder="Full Name">
+<input type="text" class="form-control" placeholder="Full Name" name="author">
 </div><br>
 
 <div class="input-group input-group-sm">
 <span class="input-group-addon">Mobile No.</span>
-<input type="text" class="form-control" placeholder="+91-xxxxxxxxxx">
+<input type="text" class="form-control" placeholder="+91-xxxxxxxxxx" name="phone">
 </div><br>
 
 <div class="input-group input-group-sm">
 <span class="input-group-addon">Subject</span>
-<input type="text" class="form-control" placeholder="Subject">
-</div><br>
-
-<div class="input-group input-group-sm">
-<span class="input-group-addon">Description</span>
-<input type="text" class="form-control" placeholder="Description">
+<input type="text" class="form-control" placeholder="Subject" name="title">
 </div><br>
 
 <div class="input-group input-group-sm">
 <span class="input-group-addon">Location</span>
-<input type="text" class="form-control" placeholder="Location">
+<input type="text" class="form-control" placeholder="Location" name="location">
 </div><br>
+
+<div class="input-group input-group-sm">
+<span class="input-group-addon">Description</span>
+<textarea  class="form-control" placeholder="Description" name="description"></textarea>
+</div><br>
+
+
 
 <!--
 <div class="input-group input-group-sm">
@@ -197,9 +213,11 @@
 
 </div>
 
-<a href="#" style="margin-left: 6em;"><button class="btn btn-primary btn-sm">Create New Issue</button></a>
+<div>
+    <input type="submit" class="btn btn-primary btn-sm" value="Create new Issue" name="submit">  </div>
+</form>
 
-<a href="dashboard.html" style="margin-left: 0em;"><button class="btn btn-primary btn-sm" style="width:10em;">Back</button></a>
+<a href="dashboard.php" style="margin-left: 0em;"><button class="btn btn-primary btn-sm" style="width:10em;">Back</button></a>
 
 
 
