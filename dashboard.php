@@ -13,6 +13,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<link rel="shortcut icon" href="css/images/logo.png" type="image/x-icon"/>
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width = device-width,initial-scale=1">
@@ -116,7 +117,7 @@
 
 		<img src="css/images/logo.png" style="margin-top: 2em;">
 		<ul class="list-inline" class="spacing" >
-		<li><h1 class="spacing">Social Responsibiity .com</h1></li>
+		<li><h1 class="spacing">Socialrevolution.com</h1></li>
 		<li><div class="media" style="margin-left:55em;margin-top: -80px;">
 		<div class="media-left media-top">
 			<a href="#">
