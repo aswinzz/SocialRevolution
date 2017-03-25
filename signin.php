@@ -33,6 +33,7 @@
 		<div class="login-form">
 			<div class="sign-in-htm">
     	<form class="login-form" method="POST" action="login.php">
+    			<script> alert('Sign in with "test" as username and password'); </script>
 				<div class="group">
 					<label for="user" class="label">Username</label>
 					<input id="user" type="text" class="input" name="user">
