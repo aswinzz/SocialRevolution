@@ -18,8 +18,8 @@
 <meta name="viewport" content="width = device-width,initial-scale=1">
 <title> Welcome User </title>
 <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-<link href="https://fonts.googleapis.com/css?family=Jim+Nightshade|Lobster" rel="stylesheet">
-</head>
+<link href="https://fonts.googleapis.com/css?family=Baloo+Bhaina" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet"></head>
 <style>
 
 	<style>
@@ -114,7 +114,7 @@
 	<div class="header"  class="jumbotron" id="phi">
 		
 
-		<img src="css/images/help.png" style="margin-top: 2em;">
+		<img src="css/images/logo.png" style="margin-top: 2em;">
 		<ul class="list-inline" class="spacing" >
 		<li><h1 class="spacing">Social Responsibiity .com</h1></li>
 		<li><div class="media" style="margin-left:55em;margin-top: -80px;">
