@@ -11,11 +11,12 @@
 <!DOCTYPE html>
 <html >
 <head>
+<link rel="shortcut icon" href="css/images/logo.png" type="image/x-icon"/>
   <meta charset="UTF-8">
   <title>Social Revolution - User Login</title>
   
-  
-  <link rel='stylesheet prefetch' href='http://fonts.googleapis.com/css?family=Open+Sans:600'>
+  <link href="https://fonts.googleapis.com/css?family=Baloo+Bhaina" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   
 </head>
@@ -42,7 +43,7 @@
 				</div>
 				<div class="group">
 					<input id="check" type="checkbox" class="check" checked>
-					<label for="check"><span class="icon"></span> Keep me Signed in</label>
+					<label for="check">Keep me Signed in</label>
 				</div>
 				<div class="group">
 					<input type="submit" class="button" value="Sign In">
