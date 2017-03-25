@@ -1,13 +1,22 @@
 <?php 
 
-  if(isset($_POST['submit'] )){
+    if(isset($_POST['username1']) && isset($_POST['password1'])){
 
-    $username1 = ($_POST['username1']);
-    $password1 = ($_POST['password1']);
+    $user = htmlentities($_POST['username1']);
+    $pass = htmlentities($_POST['password1']);
+    $phone = htmlentities($_POST['phone']);
+    $email = htmlentities($_POST['email']);
+  }
+
+    /*if(isset($_POST['submit'] )){
+
+    $user= ($_POST['username1']);
+    $pass = ($_POST['password1']);
     $phone = ($_POST['phone']);
     $email = ($_POST['email']);
+    echo ('hello');
     }
-    
+    */
     $servername = "localhost";
     $username = "root";
     $password = "";
@@ -21,7 +30,7 @@
         die("Connection failed: " . $conn->connect_error);
     }
 
-    $sql = "INSERT INTO $tbname (username, password, phone, email) VALUES ('$username1', '$password1', '$phone', '$email')";
+    $sql = "INSERT INTO $tbname (username, password, phone, email) VALUES ('$user', '$pass', '$phone', '$email')";
 
     
     if ($conn->query($sql) === TRUE) {
