@@ -17,7 +17,7 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width = device-width,initial-scale=1">
-<title> Shubham Verma </title>
+<title> Social Revolutions </title>
 <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 <link href="https://fonts.googleapis.com/css?family=Jim+Nightshade|Lobster" rel="stylesheet">
 <style>
@@ -111,7 +111,38 @@
 
 <body class="f">
 
+<script type="text/javascript">
+function validateForm() {
+    var x = document.newform.author.value;
+    var y = document.newform.phone.value;
+    var z = document.newform.subject.value;
+    var a = document.newform.location.value;
+    var b = document.newform.description.value;
+    if (x == "") {
+        alert("Name must be filled out");
+        return false;
+    }
+    
+    else if (z == "") {
+        alert("No subject");
+     return false;
+    }
+    else if (a == "") {
+        alert("Add a location");
+        return false;
+    }
+    else if (b == "") {
+        alert("Add a Description");
+      return false;
+    }
+   else if (isNaN(y)) {
+        alert("Input not valid");
+        return false;
+    }
+    
 
+}
+</script>
 
 <div class="container">
 <div class="container">
@@ -176,7 +207,7 @@
 <hr />
 <hr />
 
-  <form method="POST" action="newissue.php">
+  <form name="newform" method="POST" action="newissue.php" onsubmit="return(validateForm());">
 <div class="container" id="cne">
 <div class="input-group input-group-sm">
 <span class="input-group-addon">Your Name</span>
@@ -185,7 +216,7 @@
 
 <div class="input-group input-group-sm">
 <span class="input-group-addon">Mobile No.</span>
-<input type="text" class="form-control" placeholder="+91-xxxxxxxxxx" name="phone">
+<input type="text" class="form-control" placeholder="+91xxxxxxxxxx" name="phone">
 </div><br>
 
 <div class="input-group input-group-sm">
