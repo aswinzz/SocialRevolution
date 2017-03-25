@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<link rel="shortcut icon" href="logo.png" type="image/x-icon"/>
+	<link rel="shortcut icon" href="css/images/logo.png" type="image/x-icon"/>
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width = device-width,initial-scale=1">
 <title> Social Revolution </title>
 <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-<link href="https://fonts.googleapis.com/css?family=Jim+Nightshade|Lobster" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Baloo+Bhaina" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet">
 <style>
 	#con{
 		color: black;
@@ -102,8 +103,53 @@
 	<div class="header"  class="jumbotron" id="phi">
 		<img src="css/images/logo.png" style="margin-top: 2em;">
 		<ul class="list-inline" class="spacing">
-			<li><h1>Social Responsibility . com</h1></li>
+			<li><h1>Socialrevolution.com</h1></li>
 <?php
+	session_start();
+
+	if(!isset($_SESSION['login_user'])){  
+	  echo '<li style="margin-left: 60em;"><a href="signin.php"><button class="btn btn-submit"><div id="flip">SignIn/SignUp</button></a></li>';
+
+
+
+	}
+	else 
+	{
+		echo '<li><div class="media" style="margin-left:55em;margin-top: -80px;">';
+		echo '<div class="media-left media-top">';
+		echo  '<a href="#">';
+		echo '<img class="media-object" src="css/images/dp.jpg" alt=""></a></div>';
+		echo '<div class="media-body" style="margin-top: 10px;">';
+		echo '<h4 class="media-heading" style="margin-top: 10px;">'; echo $_SESSION['login_user'];  					echo '<a href="logout.php">  <button class="btn btn-default">Log Out</button></h4></a>';
+		echo '<h5>'; echo $_SESSION['user_phone']; '</h5>';
+		echo '<h5>'; echo $_SESSION['user_email']; '</h5>';
+
+		echo '</div>';	
+		echo '</div>';
+		echo '</div></li>';
+		
+	}
+
+?>
+		
+		</ul>
+
+	</div>
+
+</div>
+	<p>          </p>
+	<p>          </p>
+	<p>          </p>
+<div class="container" class="spacing">
+	<div class="jumbotron2">
+	<ul class="list-inline" class="spacing">
+	<li style="margin-left: 0em;"><a href="dashboard.php"><button class="btn btn-default"><div id="flip"><span class="glyphicon glyphicon-home"><span class="f"> Home<span></span></div> <div id="panel">Hello world!</div></button></a></li>
+	
+<br>
+	
+<br>
+
+	 <?php
 	session_start();
 
 	if(!isset($_SESSION['login_user'])){  
@@ -140,18 +186,10 @@
 <div class="container" class="spacing">
 	<div class="jumbotron2">
 	<ul class="list-inline" class="spacing">
-	<li style="margin-left: 0em;"><a href="#"><button class="btn btn-default"><div id="flip"><span class="glyphicon glyphicon-home"><span class="f"> Home<span></span></div> <div id="panel">Hello world!</div></button></a></li>
-	<li style="margin-left: 0em;"><a href="#l"><button class="btn btn-default"><span class="glyphicon glyphicon-info-sign"><span class="f"> About</span></span></button></a></li>
+	<li style="margin-left: 0em;"><a href="dashboard.php"><button class="btn btn-default"><div id="flip"><span class="glyphicon glyphicon-home"><span class="f"> Home<span></span></div> <div id="panel">Hello world!</div></button></a></li>
 	
-
-	<li class="dropdown" style="margin-left: 0em;"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><button class="btn btn-default">Contact us</button><span class="caret"></span>
-	<ul class="dropdown-menu">
-	<li><a href="#conus">Phone</a></li>
-	<li><a href="#conus">Email</a></li>
-	<li><a href="#conus">Mobile</a></li>
-	</ul>
-	<li style="margin-left: 0em;"><a href="#"><button class="btn btn-default"><div id="flip">Events</div> <div id="panel">Hello world!</div></button></a></li>
-	 <div class="container">
+<br>
+	
 <br>
 
 	 <?php
