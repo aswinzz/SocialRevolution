@@ -149,20 +149,12 @@
 	
 <br>
 
-		
-		</ul>
-
-	</div>
-
-</div>
-	
-
 	 <?php
 
 	$servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "db1";
+    $username = "id1169632_aswin";
+    $password = "8089374348";
+    $dbname = "id1169632_db1";
     $tbname = "issues";
 
 
