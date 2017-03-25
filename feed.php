@@ -149,48 +149,13 @@
 	
 <br>
 
-	 <?php
-	session_start();
-
-	if(!isset($_SESSION['login_user'])){  
-	  echo '<li style="margin-left: 60em;"><a href="signin.php"><button class="btn btn-submit"><div id="flip"><span class="glyphicon glyphicon-user"><span class="f">Sign In  <span style="font-family: arial;">   OR   </span> <span class="glyphicon glyphicon-plus"><span class="f">  Sign Up</span></span></span></span></button></a></li>';
-
-	}
-	else 
-	{
-		echo '<li><div class="media" style="margin-left:55em;margin-top: -80px;">';
-		echo '<div class="media-left media-top">';
-		echo  '<a href="#">';
-		echo '<img class="media-object" src="css/images/dp.jpg" alt=""></a></div>';
-		echo '<div class="media-body" style="margin-top: 10px;">';
-		echo '<h4 class="media-heading" style="margin-top: 10px;">'; echo $_SESSION['login_user'];  					echo '<a href="logout.php">  <button class="btn btn-default">Log Out</button></h4></a>';
-		echo '<h5>'; echo $_SESSION['user_phone']; '</h5>';
-		echo '<h5>'; echo $_SESSION['user_email']; '</h5>';
-
-		echo '</div>';	
-		echo '</div>';
-		echo '</div></li>';
-		
-	}
-
-?>
 		
 		</ul>
 
 	</div>
 
 </div>
-	<p>          </p>
-	<p>          </p>
-	<p>          </p>
-<div class="container" class="spacing">
-	<div class="jumbotron2">
-	<ul class="list-inline" class="spacing">
-	<li style="margin-left: 0em;"><a href="dashboard.php"><button class="btn btn-default"><div id="flip"><span class="glyphicon glyphicon-home"><span class="f"> Home<span></span></div> <div id="panel">Hello world!</div></button></a></li>
 	
-<br>
-	
-<br>
 
 	 <?php
 

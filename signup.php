@@ -21,7 +21,7 @@
         die("Connection failed: " . $conn->connect_error);
     }
 
-    $sql = "INSERT INTO users (username1, password1, phone, email) VALUES ('$username1', '$password1', '$phone', '$email')";
+    $sql = "INSERT INTO $tbname (username, password, phone, email) VALUES ('$username1', '$password1', '$phone', '$email')";
 
     
     if ($conn->query($sql) === TRUE) {
