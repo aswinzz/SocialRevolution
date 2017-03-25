@@ -14,12 +14,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<link rel="shortcut icon" href="css/images/logo.png" type="image/x-icon"/>
+<link href="https://fonts.googleapis.com/css?family=Baloo+Bhaina" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet">
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width = device-width,initial-scale=1">
 <title> Social Revolutions </title>
 <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-<link href="https://fonts.googleapis.com/css?family=Jim+Nightshade|Lobster" rel="stylesheet">
 <style>
 	#con{
 		color: black;
@@ -151,7 +153,7 @@ function validateForm() {
 
 		<img src="css/images/logo.png" style="margin-top: 2em;">
 		<ul class="list-inline" class="spacing" >
-		<li><h1 class="spacing">Social Responsibiity .com</h1></li>
+		<li><h1 class="spacing">Socialrevolution.com</h1></li>
 		<li><div class="media" style="margin-left:55em;margin-top: -80px;">
 		<div class="media-left media-top">
 			<a href="#">
@@ -177,7 +179,7 @@ function validateForm() {
 <div class="container" class="spacing" style="width: 83.5em;margin-left: 5em;">
 	<div class="jumbotron2">
 	<ul class="list-inline" class="spacing">
-	<li style="margin-left: 0em;"><a href="index.html"><button class="btn btn-default"><div id="flip"><span class="glyphicon glyphicon-home"><span class="f"> Home<span></span></div> <div id="panel">Hello world!</div></button></a></li>
+	<li style="margin-left: 0em;"><a href="dashboard.php"><button class="btn btn-default"><div id="flip"><span class="glyphicon glyphicon-home"><span class="f"> Home<span></span></div> <div id="panel">Hello world!</div></button></a></li>
 	<li style="margin-left: 0em;"><a href="dashboard.php"><button class="btn btn-default"><div id="flip">Dashboard</div> <div id="panel">Hello world!</div></button></a></li>
 	
 
@@ -245,10 +247,14 @@ function validateForm() {
 </div>
 
 <div>
-    <input type="submit" class="btn btn-primary btn-sm" value="Create new Issue" name="submit">  </div>
+    <input type="submit" class="btn btn-submit btn-lg" value="Create new Issue" style="margin-left:35em;"  name="submit">  </div>
 </form>
 
-<a href="dashboard.php" style="margin-left: 0em;"><button class="btn btn-primary btn-sm" style="width:10em;">Back</button></a>
+<p><p></p></p>
+
+<a href="dashboard.php" style="margin-left: 0em;"><button class="btn btn-primary btn-sm" style=" margin-left:57em;">Back</button></a>
+
+<br><br>
 
 
 
